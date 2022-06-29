@@ -41,11 +41,21 @@ class WelcomeViewController: UIViewController {
     
     func callAPI() {
         guard let url = URL(string: baseURL) else { return }
-        let task = URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
-            print(data)
-        })
+        let session = URLSession.shared
+        let task = session.dataTask(with: url, completionHandler: { data, response, error in
+            if let error = error {
+                print("There was an error: \(error.localizedDescription)")
+            } else {
+                guard let data = data else {
+                    let json = try? JSONSerialization.jsonObject(with: data, options: [])
+                    print("Data: \(json)")
+                }
+
+                
+            }
+            
+        }).resume()
         
-        task.resume()
     }
 }
 

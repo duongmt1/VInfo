@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1333FCF3286BEBF2003669DF /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1333FCF2286BEBF2003669DF /* DataModel.swift */; };
 		13900F57286B67B700D5A4FC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13900F56286B67B700D5A4FC /* CustomTextField.swift */; };
 		13900F59286B67C500D5A4FC /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13900F58286B67C500D5A4FC /* CustomTextField.xib */; };
 		13900F5C286B7E9100D5A4FC /* URLDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13900F5B286B7E9100D5A4FC /* URLDefine.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1333FCF2286BEBF2003669DF /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		13900F56286B67B700D5A4FC /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		13900F58286B67C500D5A4FC /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
 		13900F5B286B7E9100D5A4FC /* URLDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLDefine.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1333FCF1286BEBDA003669DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1333FCF2286BEBF2003669DF /* DataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		13900F55286B678700D5A4FC /* CustomTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +89,7 @@
 		13F28B15286B3CC700548895 /* Vinfo */ = {
 			isa = PBXGroup;
 			children = (
+				1333FCF1286BEBDA003669DF /* Model */,
 				13900F5A286B7E8200D5A4FC /* Common */,
 				13F28B2A286B3D6000548895 /* View */,
 				13F28B16286B3CC700548895 /* AppDelegate.swift */,
@@ -185,6 +196,7 @@
 				13F28B2E286B3DA600548895 /* WelcomeViewController.swift in Sources */,
 				13F28B17286B3CC700548895 /* AppDelegate.swift in Sources */,
 				13F28B19286B3CC700548895 /* SceneDelegate.swift in Sources */,
+				1333FCF3286BEBF2003669DF /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
