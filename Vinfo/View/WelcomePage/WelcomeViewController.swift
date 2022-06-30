@@ -12,6 +12,9 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var tagTF: UITextField!
     @IBOutlet weak var searchBtn: UIButton!
+    var homePageTabbar: HomePageViewController?
+    var newsTabbar: NewsViewController?
+    let tabbarController = UITabBarController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +40,22 @@ class WelcomeViewController: UIViewController {
     @objc func login() {
         callAPI()
         print("tapped")
+        setupTabbar()
+        goToHomePage()
+    }
+    
+    func setupTabbar() {
+        tabbarController.viewControllers = [homePageTabbar!, newsTabbar!]
+        
+        let firstTabbarItem = UITabBarItem(title: "Home", image: nil, tag: 0)
+        let secondTabbarItem = UITabBarItem(title: "News", image: nil, tag: 1)
+        
+        homePageTabbar?.tabBarItem = firstTabbarItem
+        newsTabbar?.tabBarItem = secondTabbarItem
+    }
+    
+    func goToHomePage() {
+        self.navigationController?.pushViewController(tabbarController, animated: true)
     }
     
     func callAPI() {
@@ -46,12 +65,9 @@ class WelcomeViewController: UIViewController {
             if let error = error {
                 print("There was an error: \(error.localizedDescription)")
             } else {
-                guard let data = data else {
-                    let json = try? JSONSerialization.jsonObject(with: data, options: [])
-                    print("Data: \(json)")
+                if let data = data {
+                    print(data)
                 }
-
-                
             }
             
         }).resume()

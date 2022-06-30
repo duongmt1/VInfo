@@ -17,6 +17,10 @@
 		13F28B23286B3CC800548895 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13F28B21286B3CC800548895 /* LaunchScreen.storyboard */; };
 		13F28B2E286B3DA600548895 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F28B2C286B3DA600548895 /* WelcomeViewController.swift */; };
 		13F28B2F286B3DA600548895 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13F28B2D286B3DA600548895 /* WelcomeViewController.xib */; };
+		337B1A32286D8A1F007EA5E1 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337B1A30286D8A1F007EA5E1 /* HomePageViewController.swift */; };
+		337B1A33286D8A1F007EA5E1 /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 337B1A31286D8A1F007EA5E1 /* HomePageViewController.xib */; };
+		337B1A37286D8A31007EA5E1 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337B1A35286D8A31007EA5E1 /* NewsViewController.swift */; };
+		337B1A38286D8A31007EA5E1 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 337B1A36286D8A31007EA5E1 /* NewsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		13F28B24286B3CC800548895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13F28B2C286B3DA600548895 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		13F28B2D286B3DA600548895 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		337B1A30286D8A1F007EA5E1 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		337B1A31286D8A1F007EA5E1 /* HomePageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePageViewController.xib; sourceTree = "<group>"; };
+		337B1A35286D8A31007EA5E1 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		337B1A36286D8A31007EA5E1 /* NewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,7 @@
 		13F28B2A286B3D6000548895 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				337B1A2F286D8A09007EA5E1 /* Tabbar */,
 				13900F55286B678700D5A4FC /* CustomTextField */,
 				13F28B2B286B3D6500548895 /* WelcomePage */,
 			);
@@ -117,6 +126,17 @@
 				13F28B2D286B3DA600548895 /* WelcomeViewController.xib */,
 			);
 			path = WelcomePage;
+			sourceTree = "<group>";
+		};
+		337B1A2F286D8A09007EA5E1 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				337B1A30286D8A1F007EA5E1 /* HomePageViewController.swift */,
+				337B1A31286D8A1F007EA5E1 /* HomePageViewController.xib */,
+				337B1A35286D8A31007EA5E1 /* NewsViewController.swift */,
+				337B1A36286D8A31007EA5E1 /* NewsViewController.xib */,
+			);
+			path = Tabbar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,9 +198,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				13900F59286B67C500D5A4FC /* CustomTextField.xib in Resources */,
+				337B1A33286D8A1F007EA5E1 /* HomePageViewController.xib in Resources */,
 				13F28B23286B3CC800548895 /* LaunchScreen.storyboard in Resources */,
 				13F28B20286B3CC800548895 /* Assets.xcassets in Resources */,
 				13F28B2F286B3DA600548895 /* WelcomeViewController.xib in Resources */,
+				337B1A38286D8A31007EA5E1 /* NewsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,11 +214,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				13900F5C286B7E9100D5A4FC /* URLDefine.swift in Sources */,
+				337B1A32286D8A1F007EA5E1 /* HomePageViewController.swift in Sources */,
 				13900F57286B67B700D5A4FC /* CustomTextField.swift in Sources */,
 				13F28B2E286B3DA600548895 /* WelcomeViewController.swift in Sources */,
 				13F28B17286B3CC700548895 /* AppDelegate.swift in Sources */,
 				13F28B19286B3CC700548895 /* SceneDelegate.swift in Sources */,
 				1333FCF3286BEBF2003669DF /* DataModel.swift in Sources */,
+				337B1A37286D8A31007EA5E1 /* NewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +361,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				"EXCLUDED_ARCHS[sdk=*]" = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Vinfo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
